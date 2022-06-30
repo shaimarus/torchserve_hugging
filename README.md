@@ -69,7 +69,7 @@ curl -X POST http://127.0.0.1:8080/predictions/sentiments -T sentiment.txt
 ![Image alt](https://github.com/shaimarus/torchserve_hugging/blob/main/Positive_examples.png)
 
 
-### 2.We will deploy pretrained resnet_18 model for image classification from HuggingFace.
+### 2.I will deploy pretrained resnet_18 model for image classification from HuggingFace.
 
 
 
