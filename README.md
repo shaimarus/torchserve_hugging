@@ -1,19 +1,19 @@
 # Serving Huggingface Transformers using TorchServe
 
-We will try to deploy pretrained model "distilbert-base-uncased-finetuned-sst-2-english" for sentiment analysis (positive and negative classes) from HuggingFace.
+We will deploy pretrained model "distilbert-base-uncased-finetuned-sst-2-english" for sentiment analysis (positive and negative classes) from HuggingFace.
 
 ## Installation
-* 1.I run pure python 3.9 throw docker and install next dependencies:
-apt update
-apt install default-jdk 
-pip install torchserve torch-model-archiver torch-workflow-archiver
-pip install transformers
+* 1.I run pure python 3.9 throw docker and install next dependencies:<br/>
+apt update <br/>
+apt install default-jdk  <br/>
+pip install torchserve torch-model-archiver torch-workflow-archiver <br/>
+pip install transformers <br/>
 
-* 2.I created folder 'sentiment_deployment' and then git clone into torchserv repository.
-mkdir sentiment_deployment
-cd sentiment_deployment/
-git clone https://github.com/pytorch/serve.git
-cd serve/
+* 2.I created folder 'sentiment_deployment' and then git clone into torchserv repository.<br/>
+mkdir sentiment_deployment <br/>
+cd sentiment_deployment <br/>
+git clone https://github.com/pytorch/serve.git <br/>
+cd serve/ <br/>
 
 Also, we need run some dependencies:
 python ./ts_scripts/install_dependencies.py
