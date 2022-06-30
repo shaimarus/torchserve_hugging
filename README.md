@@ -63,3 +63,5 @@ Before using our model we need prepare text file for predicting sentiment.(senti
 
 curl -X POST http://127.0.0.1:8080/predictions/sentiments -T sentiment.txt
 
+![Image alt](https://github.com/shaimarus/torchserve_hugging/blob/main/Negative_examples.png)
+![Image alt](https://github.com/shaimarus/torchserve_hugging/blob/main/Positive_examples.png)
