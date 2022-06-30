@@ -90,3 +90,6 @@ torchserve --start --model-store model_store --models resnet-18=resnet-18.mar <b
 * Finally <br/>
 curl http://127.0.0.1:8080/predictions/resnet-18 -T ./examples/image_classifier/kitten.jpg <br/>
 ![Image alt](https://github.com/shaimarus/torchserve_hugging/blob/main/inference.jpg)
+
+
+![Image alt](https://github.com/pytorch/serve/blob/master/examples/image_classifier/kitten.jpg)
