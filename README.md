@@ -73,8 +73,6 @@ curl -X POST http://127.0.0.1:8080/predictions/sentiments -T sentiment.txt
 
 
 
-## Deploy image classification model
-
 * 2.I created folder 'image_classification_deployment' and then git clone into torchserv repository.<br/>
 cd /home <br/>
 mkdir image_classification_deployment <br/>
