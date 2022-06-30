@@ -80,10 +80,13 @@ cd image_classification_deployment/ <br/>
 git clone https://github.com/pytorch/serve.git <br/>
 cd serve/ <br/>
 
-3.
-wget https://download.pytorch.org/models/resnet18-f37072fd.pth <br/>
+* 3.wget https://download.pytorch.org/models/resnet18-f37072fd.pth <br/>
 torch-model-archiver --model-name resnet-18 --version 1.0 --model-file ./examples/image_classifier/resnet_18/model.py --serialized-file resnet18-f37072fd.pth --handler image_classifier --extra-files ./examples/image_classifier/index_to_name.json <br/>
 mkdir model_store <br/>
 mv resnet-18.mar model_store/ <br/>
 torchserve --start --model-store model_store --models resnet-18=resnet-18.mar <br/>
+![Image alt](https://github.com/shaimarus/torchserve_hugging/blob/main/install.jpg)
 
+* Finally <br/>
+curl http://127.0.0.1:8080/predictions/resnet-18 -T ./examples/image_classifier/kitten.jpg <br/>
+![Image alt](https://github.com/shaimarus/torchserve_hugging/blob/main/inference.jpg)
