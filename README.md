@@ -1,8 +1,8 @@
 # Serving Huggingface Transformers using TorchServe
 
-# 1.
+### 1.We will deploy pretrained model "distilbert-base-uncased-finetuned-sst-2-english" for sentiment analysis (positive and negative classes) from HuggingFace.
 
-We will deploy pretrained model "distilbert-base-uncased-finetuned-sst-2-english" for sentiment analysis (positive and negative classes) from HuggingFace.
+
 
 ## Installation
 * 1.I run pure python 3.9 throw docker and install next dependencies:<br/>
@@ -69,7 +69,9 @@ curl -X POST http://127.0.0.1:8080/predictions/sentiments -T sentiment.txt
 ![Image alt](https://github.com/shaimarus/torchserve_hugging/blob/main/Positive_examples.png)
 
 
-# 2.
+### 2.We will deploy pretrained resnet_18 model for image classification from HuggingFace.
+
+
 
 ## Deploy image classification model
 
