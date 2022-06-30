@@ -1,5 +1,7 @@
 # Serving Huggingface Transformers using TorchServe
- 
+
+# 1.
+
 We will deploy pretrained model "distilbert-base-uncased-finetuned-sst-2-english" for sentiment analysis (positive and negative classes) from HuggingFace.
 
 ## Installation
@@ -65,3 +67,23 @@ curl -X POST http://127.0.0.1:8080/predictions/sentiments -T sentiment.txt
 
 ![Image alt](https://github.com/shaimarus/torchserve_hugging/blob/main/Negative_examples.png)
 ![Image alt](https://github.com/shaimarus/torchserve_hugging/blob/main/Positive_examples.png)
+
+
+# 2.
+
+## Deploy image classification model
+
+* 2.I created folder 'image_classification_deployment' and then git clone into torchserv repository.<br/>
+cd /home <br/>
+mkdir image_classification_deployment <br/>
+cd image_classification_deployment/ <br/>
+git clone https://github.com/pytorch/serve.git <br/>
+cd serve/ <br/>
+
+3.
+wget https://download.pytorch.org/models/resnet18-f37072fd.pth <br/>
+torch-model-archiver --model-name resnet-18 --version 1.0 --model-file ./examples/image_classifier/resnet_18/model.py --serialized-file resnet18-f37072fd.pth --handler image_classifier --extra-files ./examples/image_classifier/index_to_name.json <br/>
+mkdir model_store <br/>
+mv resnet-18.mar model_store/ <br/>
+torchserve --start --model-store model_store --models resnet-18=resnet-18.mar <br/>
+
