@@ -20,7 +20,7 @@ python ./ts_scripts/install_dependencies.py
 
 We have installed all the necessary libraries.
 
-
+## Edit config file
 * 3.Edit next file setup_config.json (serve/examples/Huggingface_Transformers)
 {
  "model_name":"distilbert-base-uncased-finetuned-sst-2-english",
@@ -40,7 +40,7 @@ We have installed all the necessary libraries.
  "0":"Negative",
  "1":"Positive"
 }
-
+## Building .mar file for torchserve
 * 5.Lets' now download transformer model using next script:
 python Download_Transformer_models.py
 
@@ -57,7 +57,7 @@ mv distilBERTSeqClassification.mar model_store/
 torchserve --start --model-store model_store --models sentiments=distilBERTSeqClassification.mar --ncs
 
 
-Running inference
+## Running inference
 
 Before using our model we need prepare text file for predicting sentiment.(sentiment.txt) and then run next script:
 
