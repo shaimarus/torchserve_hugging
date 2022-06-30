@@ -1,6 +1,6 @@
 # Serving Huggingface Transformers using TorchServe
 
-### 1.We will deploy pretrained model "distilbert-base-uncased-finetuned-sst-2-english" for sentiment analysis (positive and negative classes) from HuggingFace.
+### 1.I will deploy pretrained model "distilbert-base-uncased-finetuned-sst-2-english" for sentiment analysis (positive and negative classes) from HuggingFace.
 
 
 
